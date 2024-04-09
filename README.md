@@ -1,4 +1,4 @@
-# Gotify-CLO
+# Gotify-CLI
 
 [![trivy](https://github.com/visibilityspots/dockerfile-gotify-cli/actions/workflows/trivy.yml/badge.svg)](https://github.com/visibilityspots/dockerfile-gotify-cli/actions/workflows/trivy.yml)
 [![docker-hub-description](https://github.com/visibilityspots/dockerfile-gotify-cli/actions/workflows/docker-hub-description.yml/badge.svg)](https://github.com/visibilityspots/dockerfile-gotify-cli/actions/workflows/docker-hub-description.yml)
