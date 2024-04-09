@@ -7,7 +7,6 @@
 [![docker image size](https://img.shields.io/docker/image-size/visibilityspots/gotify-cli/latest)](https://hub.docker.com/r/visibilityspots/gotify-cli)
 [![docker pulls](https://img.shields.io/docker/pulls/visibilityspots/gotify-cli.svg)](https://hub.docker.com/r/visibilityspots/gotify-cli/)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fvisibilityspots%2Fdockerfile-gotify-cli.svg?type=shield&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2Fvisibilityspots%2Fdockerfile-gotify-cli?ref=badge_shield&issueType=license)
 
 a docker container which runs the [gotify-cli](https://github.com/gotify/cli)
 
@@ -22,11 +21,6 @@ $ docker run --name gotify-cli --rm visibilityspots/gotify-cli:latest help
 Build against pinned upstream release
 ```
 $ docker build -t visibilityspots/gotify-cli:latest .
-```
-
-Build against a specific upstream release
-```
-$ docker build -t visibilityspots/gotify-cli:latest . --build-arg UPSTREAM_RELEASE_TAG=2021.5.10
 ```
 
 ### buildx
