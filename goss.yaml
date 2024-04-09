@@ -1,0 +1,11 @@
+user:
+  gotify:
+    exists: true
+
+command:
+  gotify --version:
+    exit-status: 0
+    stdout:
+    - 'Version:   v2.2.3'
+    - 'Commit:    bbbd6e6638c00881c4a410256ea5f4511f063f5c'
+    - 'BuildDate: April 2024'
