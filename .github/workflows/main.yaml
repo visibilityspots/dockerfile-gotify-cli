@@ -22,7 +22,7 @@ jobs:
       - name: Execute Goss tests
         env:
           GOSS_FILES_STRATEGY: cp
-        run: dgoss run --entrypoint='' visibilityspots/gotify-cli:dev sleep 5
+        run: dgoss run visibilityspots/gotify-cli push -t 'GitHUB CI' --token ${{ secrets.GOTIFY_TOKEN }} --url=${{ secrets.GOTIFY_URL }} dgoss test run from within github workflow
 
   deploy:
     needs: test

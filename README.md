@@ -35,7 +35,7 @@ $ docker buildx build -t visibilityspots/gotify-cli:latest --platform linux/amd6
 I wrote some tests in a goss.yaml file which can be executed by [dgoss](https://github.com/aelsabbahy/goss/tree/master/extras/dgoss) to test the created image
 
 ```
-$ dgoss run --entrypoint='' visibilityspots/gotify-cli:dev sleep 5                                                                                                    ✔ 
+$ dgoss run visibilityspots/gotify-cli push -t 'TEST' --token BAR --url=https://FOO test bericht
 INFO: Starting docker container
 INFO: Container ID: fcab7a6a
 INFO: Sleeping for 0.2
@@ -56,7 +56,7 @@ using [act](https://github.com/nektos/act#overview----) for local testing of the
 
 ```
 $ act -l
-Stage  Job ID  Job name  Workflow name           Workflow file               Events                    
+Stage  Job ID  Job name  Workflow name           Workflow file               Events
 0      update  update    docker-hub-description  docker-hub-description.yml  push
 0      test    test      CI                      main.yaml                   push
 0      scan    scan      trivy                   trivy.yml                   push,pull_request,schedule
