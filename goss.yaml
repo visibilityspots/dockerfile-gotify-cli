@@ -8,4 +8,4 @@ command:
     stdout:
     - 'Version:   v2.2.4'
     - 'Commit:    091c68721f12ddf9488aae609eb16bdc035b9899'
-    - 'BuildDate: June 2024'
+    - 'BuildDate: July 2024'
