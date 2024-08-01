@@ -6,6 +6,6 @@ command:
   gotify version:
     exit-status: 0
     stdout:
-    - 'Version:   v2.2.4'
-    - 'Commit:    091c68721f12ddf9488aae609eb16bdc035b9899'
-    - 'BuildDate: July 2024'
+    - 'Version:   v2.3.2'
+    - 'Commit:    19984894d4459ad9eac23c1829b20efb7cf775f0'
+    - 'BuildDate: August 2024'
