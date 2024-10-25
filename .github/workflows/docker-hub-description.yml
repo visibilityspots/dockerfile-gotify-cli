@@ -7,4 +7,4 @@ on:
 
 jobs:
   update:
-    uses: visibilityspots/cloudflared/.github/workflows/docker-hub-description.yml@main
+    uses: visibilityspots/dockerfile-cloudflared/.github/workflows/docker-hub-description.yml@main
