@@ -2,6 +2,8 @@ name: docker-hub-description
 
 on:
   push:
+    tags:
+      - '*'
 
 jobs:
   update:
