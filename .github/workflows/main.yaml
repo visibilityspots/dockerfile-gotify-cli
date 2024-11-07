@@ -11,5 +11,5 @@ env:
 jobs:
   main:
     uses: visibilityspots/dockerfile-cloudflared/.github/workflows/main.yml@main
-      secrets:
+    secrets:
       DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
