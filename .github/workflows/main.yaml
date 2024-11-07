@@ -5,6 +5,9 @@ on:
     tags:
       - '*'
 
+env:
+  GOSS_CMD: "push -t 'GitHUB CI' --token ${{ secrets.GOTIFY_TOKEN }} --url=${{ secrets.GOTIFY_URL }} dgoss test run from within github workflow"
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -22,7 +25,7 @@ jobs:
       - name: Execute Goss tests
         env:
           GOSS_FILES_STRATEGY: cp
-        run: dgoss run visibilityspots/gotify-cli:dev push -t 'GitHUB CI' --token ${{ secrets.GOTIFY_TOKEN }} --url=${{ secrets.GOTIFY_URL }} dgoss test run from within github workflow
+        run: dgoss run visibilityspots/gotify-cli:dev ${{ env.GOSS_CMD }}
 
   deploy:
     needs: test
