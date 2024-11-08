@@ -10,7 +10,7 @@ env:
 jobs:
   main:
     uses: visibilityspots/dockerfile-cloudflared/.github/workflows/main.yml@main
-    inputs:
+    with:
       GOSS_CMD: ${{ env.GOSS_CMD }}
     secrets:
       DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
