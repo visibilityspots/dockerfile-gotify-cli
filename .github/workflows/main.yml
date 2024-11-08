@@ -4,9 +4,13 @@ on:
   push:
     tags:
       - '*'
+env:
+  GOSS_CMD: "push -t 'GitHUB CI' --token ${{ secrets.GOTIFY_TOKEN }} --url=${{ secrets.GOTIFY_URL }} dgoss test run from within github workflow"
 
 jobs:
   main:
     uses: visibilityspots/dockerfile-cloudflared/.github/workflows/main.yml@main
+    inputs:
+      GOSS_CMD: ${{ env.GOSS_CMD }}
     secrets:
       DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
