@@ -2,7 +2,7 @@
 
 [![trivy](https://github.com/visibilityspots/dockerfile-gotify-cli/actions/workflows/trivy.yml/badge.svg)](https://github.com/visibilityspots/dockerfile-gotify-cli/actions/workflows/trivy.yml)
 [![docker-hub-description](https://github.com/visibilityspots/dockerfile-gotify-cli/actions/workflows/docker-hub-description.yml/badge.svg)](https://github.com/visibilityspots/dockerfile-gotify-cli/actions/workflows/docker-hub-description.yml)
-[![build status](https://github.com/visibilityspots/dockerfile-gotify-cli/actions/workflows/main.yaml/badge.svg)](https://github.com/visibilityspots/dockerfile-gotify-cli/actions/workflows/main.yaml)
+[![build status](https://github.com/visibilityspots/dockerfile-gotify-cli/actions/workflows/main.yml/badge.svg)](https://github.com/visibilityspots/dockerfile-gotify-cli/actions/workflows/main.yml)
 [![gitHub release](https://img.shields.io/github/v/release/visibilityspots/dockerfile-gotify-cli)](https://github.com/visibilityspots/dockerfile-gotify-cli/releases)
 [![docker image size](https://img.shields.io/docker/image-size/visibilityspots/gotify-cli/latest)](https://hub.docker.com/r/visibilityspots/gotify-cli)
 [![docker pulls](https://img.shields.io/docker/pulls/visibilityspots/gotify-cli.svg)](https://hub.docker.com/r/visibilityspots/gotify-cli/)
