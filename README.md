@@ -7,6 +7,7 @@
 [![docker image size](https://img.shields.io/docker/image-size/visibilityspots/gotify-cli/latest)](https://hub.docker.com/r/visibilityspots/gotify-cli)
 [![docker pulls](https://img.shields.io/docker/pulls/visibilityspots/gotify-cli.svg)](https://hub.docker.com/r/visibilityspots/gotify-cli/)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fvisibilityspots%2Fdockerfile-gotify-cli.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fvisibilityspots%2Fdockerfile-gotify-cli?ref=badge_shield)
 
 a docker container which runs the [gotify-cli](https://github.com/gotify/cli)
 
@@ -74,3 +75,6 @@ $ act -j test
 ## License
 
 Distributed under the [MIT license](https://github.com/visibilityspots/dockerfile-gotify-cli/blob/master/LICENSE)
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fvisibilityspots%2Fdockerfile-gotify-cli.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fvisibilityspots%2Fdockerfile-gotify-cli?ref=badge_large)
