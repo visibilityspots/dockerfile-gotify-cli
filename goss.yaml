@@ -2,10 +2,13 @@ user:
   gotify:
     exists: true
 
+entrypoint:
+  ''
+
 command:
   gotify version:
     exit-status: 0
     stdout:
     - 'Version:   v2.3.2'
     - 'Commit:    19984894d4459ad9eac23c1829b20efb7cf775f0'
-    - 'BuildDate: December 2024'
+    - 'BuildDate: August 2025'
