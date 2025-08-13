@@ -10,12 +10,6 @@
 
 a docker container which runs the [gotify-cli](https://github.com/gotify/cli)
 
-## run
-
-```
-$ docker run --name gotify-cli --rm visibilityspots/gotify-cli:latest help
-```
-
 ## build
 
 Build against pinned upstream release
@@ -30,7 +24,26 @@ $ docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
 $ docker buildx build -t visibilityspots/gotify-cli:latest --platform linux/amd64,linux/arm/v6,linux/arm/v7 --push .
 ```
 
-### dgoss
+## configuration
+
+fetch your gotify token from the config file created by gotify [initialization](https://github.com/gotify/cli?tab=readme-ov-file#configuration) which you could perform on your local machine or from within a docker container.
+```
+cat cli.json
+{
+  "token": "BAR",
+  "url": "FOO",
+  "defaultPriority": 0
+}
+```
+
+## run
+
+```
+$ docker run --name gotify-cli --rm visibilityspots/gotify-cli:latest help
+$ docker run --rm -v "$PWD/cli.json:/home/gotify/cli.json" visibilityspots/gotify-cli:latest push -p 5 "Test from Gotify CLI latest build"
+```
+
+## dgoss
 
 I wrote some tests in a goss.yaml file which can be executed by [dgoss](https://github.com/aelsabbahy/goss/tree/master/extras/dgoss) to test the created image
 
