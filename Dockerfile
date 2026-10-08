@@ -34,7 +34,9 @@ FROM alpine:${ALPINE_VERSION}
 ARG GOLANG_VERSION
 ARG ALPINE_VERSION
 
-RUN adduser -S gotify
+# the alpine image lags behind its own package repo; pull in security fixes
+# that are already released (e.g. zlib CVE-2026-85091) instead of waiting for it
+RUN apk upgrade --no-cache && adduser -S gotify
 
 COPY --from=gobuild /tmp/release/gotify /usr/local/bin/gotify
 
