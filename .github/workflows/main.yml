@@ -4,9 +4,17 @@ on:
   push:
     tags:
       - '*'
+  # test only: the shared workflow skips deploy on pull requests
+  pull_request:
+    branches: [main]
 jobs:
   main:
     uses: visibilityspots/github-workflows/.github/workflows/main.yml@main
+    with:
+      # GOSS_CMD does a real Gotify push and is not available on Dependabot
+      # PRs; a PR keeps the container alive and runs the goss checks only
+      pr_run_args: '--entrypoint sleep'
+      pr_goss_cmd: '60'
     secrets:
       DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
       GOSS_CMD: ${{ secrets.GOSS_CMD }}
