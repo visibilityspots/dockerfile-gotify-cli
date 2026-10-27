@@ -9,7 +9,7 @@ on:
     branches: [main]
 jobs:
   main:
-    uses: visibilityspots/github-workflows/.github/workflows/main.yml@ci/pr-tests
+    uses: visibilityspots/github-workflows/.github/workflows/main.yml@main
     with:
       # GOSS_CMD does a real Gotify push and is not available on Dependabot
       # PRs; a PR keeps the container alive and runs the goss checks only
