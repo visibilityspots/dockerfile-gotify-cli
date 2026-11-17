@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v2.4.4] - 2026-11-17
+### :bug: Bug Fixes
+- [`7c949fe`](https://github.com/visibilityspots/dockerfile-gotify-cli/commit/7c949fef3f05dc793fa7c9b018e1b5d6ab9c3c3b) - **security**: go 1.27.4 and x/crypto v0.59.0 *(commit by [@visibilityspots](https://github.com/visibilityspots))*
+
+
 ## [v2.4.3] - 2026-10-27
 ### :bug: Bug Fixes
 - [`07dd5b6`](https://github.com/visibilityspots/dockerfile-gotify-cli/commit/07dd5b6560fa45aa32663a75a16cce24bbaac94b) - **security**: go 1.27.3, x/net v0.62.0, x/crypto v0.58.0 *(commit by [@visibilityspots](https://github.com/visibilityspots))*
@@ -63,3 +68,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [v2.4.1]: https://github.com/visibilityspots/dockerfile-gotify-cli/compare/v2.4.0...v2.4.1
 [v2.4.2]: https://github.com/visibilityspots/dockerfile-gotify-cli/compare/v2.4.1...v2.4.2
 [v2.4.3]: https://github.com/visibilityspots/dockerfile-gotify-cli/compare/v2.4.2...v2.4.3
+[v2.4.4]: https://github.com/visibilityspots/dockerfile-gotify-cli/compare/v2.4.3...v2.4.4
