@@ -11,6 +11,9 @@ ARG XCRYPTO_VERSION=v0.59.0
 # upstream v2.4.0 pins golang.org/x/net v0.58.0, which Trivy flags
 # (CVE-2026-78659, -78660, -78663, -78669 high, -97032); bump it the same way
 ARG XNET_VERSION=v0.62.0
+# upstream v2.4.0 pins go.opentelemetry.io/otel* v1.44.0, which Trivy flags
+# (CVE-2026-128085 in otel/trace); otel, trace and metric must move together
+ARG OTEL_VERSION=v1.47.0
 
 FROM golang:${GOLANG_VERSION}-alpine${ALPINE_VERSION} AS gobuild
 ARG GOLANG_VERSION
@@ -20,6 +23,7 @@ ARG UPSTREAM_COMMIT
 ARG UPSTREAM_BUILD_DATE
 ARG XCRYPTO_VERSION
 ARG XNET_VERSION
+ARG OTEL_VERSION
 
 WORKDIR /tmp
 
@@ -29,7 +33,9 @@ RUN apk add --no-cache gcc build-base curl tar && \
 
 WORKDIR /tmp/release
 
-RUN go get golang.org/x/crypto@${XCRYPTO_VERSION} golang.org/x/net@${XNET_VERSION}
+RUN go get golang.org/x/crypto@${XCRYPTO_VERSION} golang.org/x/net@${XNET_VERSION} \
+      go.opentelemetry.io/otel@${OTEL_VERSION} go.opentelemetry.io/otel/trace@${OTEL_VERSION} \
+      go.opentelemetry.io/otel/metric@${OTEL_VERSION}
 
 RUN go build -ldflags="-X 'main.Version=$UPSTREAM_RELEASE_TAG' -X 'main.Commit=$UPSTREAM_COMMIT' -X 'main.BuildDate=$UPSTREAM_BUILD_DATE'" -a -o gotify
 
